@@ -1,47 +1,140 @@
+
 <!DOCTYPE html>
-<!-- saved from url=(0066)https://andrewbanchich.github.io/forty-jekyll-theme/elements.html# -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>SangHeon LEE</title>
-	
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-	<!--[if lte IE 8]><script src="/forty-jekyll-theme/assets/js/ie/html5shiv.js"></script><![endif]-->
-	<link rel="stylesheet" href="https://tkdgjs.github.io/tkdgjs0213.github.io//assets/main.css">
-	<!--[if lte IE 9]><link rel="stylesheet" href="/forty-jekyll-theme/assets/css/ie9.css" /><![endif]-->
-	<!--[if lte IE 8]><link rel="stylesheet" href="/forty-jekyll-theme/assets/css/ie8.css" /><![endif]-->
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="이상헌 — AI System · System Engineer | Curriculum Vitae">
+  <meta name="theme-color" content="#ffffff">
+  <title>이상헌 | Curriculum Vitae</title>
+  <style>
+    :root{--accent:#df3c2f;--text:#343434;--muted:#858585;--line:#626262;--page:#fff;--background:#f3f4f5;--width:970px}
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--background);color:var(--text);font-family:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:14px;line-height:1.55;word-break:keep-all}
+    .topbar{max-width:var(--width);margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .topbar .brand{font-size:12px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#585858}
+    .topbar .tools{display:flex;gap:8px;align-items:center}
+    .button{display:inline-block;padding:8px 14px;border:1px solid #d4d4d4;border-radius:5px;text-decoration:none;color:#363636;background:white;font-size:12px;font-weight:700;transition:background .15s}
+    .button:hover,.button:focus-visible{background:#f9eae8;border-color:var(--accent);outline:none}
+    .button.primary{background:var(--accent);border-color:var(--accent);color:white}
+    .button.primary:hover{background:#b52f24}
+    .sheet{max-width:var(--width);margin:0 auto 44px;background:var(--page);padding:44px 64px 32px;box-shadow:0 9px 38px rgba(0,0,0,.07);min-height:1150px}
+    header.profile{text-align:center}
+    h1{font-size:48px;line-height:1.12;font-weight:800;letter-spacing:-.05em;margin:0 0 3px}
+    .position{font-size:12px;letter-spacing:.055em;color:var(--accent);font-weight:800;text-transform:uppercase;margin:0 0 3px}
+    .address{font-size:12px;font-style:italic;color:#929292;margin:0 0 3px}
+    .contacts{display:flex;justify-content:center;flex-wrap:wrap;column-gap:9px;row-gap:3px;align-items:center;font-size:12px}
+    .contacts a{color:#444;text-decoration:none}
+    .contacts a:hover{text-decoration:underline;color:var(--accent)}
+    .contacts .divider{color:#aaa}
+    .motto{text-align:center;margin:27px 0 47px;font-size:13px;font-family:serif;letter-spacing:.1em}
+    section{margin-bottom:31px}
+    .section-heading{margin:0 0 8px;display:flex;align-items:baseline;gap:6px;white-space:nowrap;font-size:25px;line-height:1.25;font-weight:800;letter-spacing:-.025em}
+    .section-heading .start{color:var(--accent)}
+    .section-heading::after{content:"";height:1px;background:#555;flex:1;align-self:end;margin-bottom:5px}
+    .education-item{display:grid;grid-template-columns:minmax(0,1fr) 178px;gap:5px 24px;margin:12px 0 20px;align-items:start}
+    .education-item h3,.activity-item h3{font-size:15px;font-weight:800;margin:0 0 2px;line-height:1.42}
+    .education-item .degree{font-size:13px;color:#777}
+    .education-item .details{grid-column:1 / -1;font-size:13px;margin:10px 0 0;padding-left:18px}
+    .education-item .where{text-align:right;color:var(--accent);font-size:13px;font-weight:500;line-height:1.4}
+    .education-item .date{text-align:right;color:#a0a0a0;font-size:12px;font-style:italic;margin-top:2px}
+    .skills{display:grid;grid-template-columns:130px minmax(0,1fr);column-gap:17px;row-gap:3px;font-size:13px;margin-top:11px}
+    .skills dt{font-weight:800;text-align:right;margin:0}
+    .skills dd{margin:0;color:#7f7f7f}
+    .activity-item{display:grid;grid-template-columns:minmax(0,1fr) 130px;gap:18px;margin:14px 0 23px;align-items:start}
+    .activity-item .subtitle{color:#858585;font-size:12px;margin:3px 0 0;line-height:1.5}
+    .activity-item .type{text-align:right;color:var(--accent);font-size:13px;font-style:italic;line-height:1.45}
+    .activity-item .role{text-align:right;color:#a0a0a0;font-size:12px;font-style:italic;margin-top:3px}
+    footer{display:flex;align-items:center;justify-content:space-between;color:#a0a0a0;font-size:10px;font-variant:small-caps;letter-spacing:.1em;margin-top:54px;gap:16px}
+    .sheet a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+    @media (max-width:700px){.sheet{padding:31px 22px;margin-bottom:0;box-shadow:none;min-height:0}.topbar{padding:10px 14px}.topbar .brand{font-size:10px}.button{padding:7px 8px;font-size:11px}h1{font-size:37px}.address{font-size:11px}.contacts{font-size:11px}.motto{margin:24px 0 35px}.section-heading{font-size:23px}.education-item{grid-template-columns:1fr;gap:1px;margin-bottom:20px}.education-item .where,.education-item .date{text-align:left}.education-item .where{margin-top:5px}.education-item .details{grid-column:1}.skills{grid-template-columns:91px minmax(0,1fr);gap:4px 10px}.activity-item{grid-template-columns:1fr;gap:4px}.activity-item .type,.activity-item .role{text-align:left}.activity-item .type{margin-top:1px}.activity-item .type::after{content:" · ";color:#aaa}.activity-item .role{display:inline}.activity-item .meta{display:flex;gap:7px;align-items:baseline}footer{font-size:9px;flex-wrap:wrap}}
+    @media print{@page{size:A4;margin:12mm}body{background:white;font-size:11px}.topbar{display:none}.sheet{box-shadow:none;max-width:none;padding:0;margin:0;min-height:0}h1{font-size:37px}.motto{margin:16px 0 28px}section{margin-bottom:23px}.education-item{margin:9px 0 12px}.education-item .details{margin-top:6px}.activity-item{margin:10px 0 12px}footer{margin-top:26px}.section-heading{font-size:21px}a{color:inherit}}
+  </style>
 </head>
+<body>
+  <div class="topbar" aria-label="문서 도구">
+    <div class="brand">Curriculum Vitae</div>
+    <div class="tools">
+      <a class="button" href="Awesome_CV.pdf" target="_blank" rel="noopener">원본 PDF 보기</a>
+      <a class="button primary" href="Awesome_CV.pdf" download>PDF 다운로드</a>
+    </div>
+  </div>
+  <main class="sheet">
+    <header class="profile">
+      <h1>이상헌</h1>
+      <p class="position">AI System · System Engineer</p>
+      <p class="address">46 Seoae-ro 3-gil, Jung-gu, Seoul, 04623, Republic of Korea</p>
+      <div class="contacts">
+        <span>☎ <a href="tel:+821041451281">(+82) 10-4145-1281</a></span>
+        <span class="divider">|</span>
+        <span>✉ <a href="mailto:tkdgjs0213@gmail.com">tkdgjs0213@gmail.com</a></span>
+        <span class="divider">|</span>
+        <span>⌘ <a href="https://github.com/tkdGJS" target="_blank" rel="noopener">tkdgjs.github.io</a></span>
+        <span class="divider">|</span>
+        <span>▣ Sangheon0213</span>
+      </div>
+    </header>
+    <p class="motto">“盡人事待天命”</p>
 
+    <section aria-labelledby="education">
+      <h2 class="section-heading" id="education"><span><span class="start">Edu</span>cation</span></h2>
+      <article class="education-item">
+        <div><h3>동국대학교(일반대학원)</h3><div class="degree">석사과정(졸업예정) 컴퓨터공학전공</div></div>
+        <div><div class="where">서울, 대한민국</div><div class="date">2025. 03 - 2027. 02</div></div>
+        <ul class="details"><li>차세대 운영체제 연구실(NOSLab), 석사과정.</li></ul>
+      </article>
+      <article class="education-item">
+        <div><h3>가천대학교(일반대학원)</h3><div class="degree">석사과정(중퇴) 컴퓨터공학전공</div></div>
+        <div><div class="where">성남, 대한민국</div><div class="date">2025. 03 - 2027. 02</div></div>
+        <ul class="details"><li>차세대 운영체제 연구실(NOSLab), 석사과정.</li></ul>
+      </article>
+      <article class="education-item">
+        <div><h3>가천대학교</h3><div class="degree">학부(졸업) 의용생체공학과(주전공), 컴퓨터공학과(복수전공)</div></div>
+        <div><div class="where">인천, 대한민국</div><div class="date">2025. 03 - 2027. 02</div></div>
+        <ul class="details"><li>차세대 운영체제 연구실(NOSLab), 학부연구생.</li></ul>
+      </article>
+    </section>
 
-<body class="" style="">
-    <script type="text/javascript">document.body.classList.add("is-loading");</script>
+    <section aria-labelledby="skills">
+      <h2 class="section-heading" id="skills"><span><span class="start">Ski</span>lls</span></h2>
+      <dl class="skills">
+        <dt>AI/ML</dt><dd>PyTorch, vLLM</dd>
+        <dt>Languages</dt><dd>C, Python, Shell</dd>
+        <dt>Tracing</dt><dd>blktrace, ftrace, eBPF, Ctags/Cscope</dd>
+        <dt>Storage</dt><dd>ZNS, CSSD, NVMeVirt, Femu</dd>
+        <dt>File system</dt><dd>F2FS, Ext4</dd>
+      </dl>
+    </section>
 
-    <!-- Wrapper -->
-<div id="wrapper">
-
-<!-- Header -->
-<header id="header">
-	<a href="https://noslab.github.io/pages/projects.html" class="logo"> <span>NOSLAB</span></a>
-	<nav>
-		<a href="https://tkdgjs.github.io/tkdgjs0213.github.io/#menu">Menu</a>
-	</nav>
-</header>
-
-<!-- Menu -->
-
- <!-- Main -->
-<div id="main" class="alt">
-
-<!-- One -->
-<section id="one">
-	<div class="inner">
-		<header class="major">
-			<h1>SangHeon LEE</h1>
-		</header>
-
-<!-- Content -->
-<!-- <h2 id="content">Introduce</h2> -->
-<!-- <div class="image left">
-	<div class="4u"><span class="image fit"><img src="https://tkdgjs.github.io/tkdgjs0213.github.io//assets\tkdgjs.jpg" alt=""></span></div>
-</div> -->
-<pre>
-Student
-Department of Bio Medical Engineering
+    <section aria-labelledby="activation">
+      <h2 class="section-heading" id="activation"><span><span class="start">Act</span>ivation</span></h2>
+      <article class="activity-item">
+        <div><h3>Check-QZP: A Lightweight Checkpoint Mechanism for Deep Learning Frameworks</h3><p class="subtitle">MDPI Applied Sciences (2024.10), Impact Factor: 3.00</p></div>
+        <div class="meta"><div class="type">Journal</div><div class="role">First Author</div></div>
+      </article>
+      <article class="activity-item">
+        <div><h3>ZAB: Fast and Efficient Write Buffer Algorithm for Optimizing Parallelism inside Zoned Namespace Storage Device</h3><p class="subtitle">IEEE Internet of Things Journal (2026.06), Impact Factor: 8.70</p></div>
+        <div class="meta"><div class="type">Journal</div><div class="role">Second Author</div></div>
+      </article>
+      <article class="activity-item">
+        <div><h3>ReZNS: Energy and Performance-Optimal Mapping Mechanism for ZNS SSD</h3><p class="subtitle">MDPI Applied Sciences (2024.10), Impact Factor: 3.00</p></div>
+        <div class="meta"><div class="type">Journal</div><div class="role">Second Author</div></div>
+      </article>
+      <article class="activity-item">
+        <div><h3>멀티테넌트 멀티턴 환경에서 LLM 인스턴스의 TTFT 꼬리 지연 분석</h3><p class="subtitle">2026 한국컴퓨터종합학술대회</p></div>
+        <div class="meta"><div class="type">Poster</div><div class="role">Presenter</div></div>
+      </article>
+      <article class="activity-item">
+        <div><h3>Ext4 및 F2FS의 Discard 명령에 따른 쓰기 성능 분석</h3><p class="subtitle">2024 한국컴퓨터종합학술대회</p></div>
+        <div class="meta"><div class="type">Poster</div><div class="role">Presenter</div></div>
+      </article>
+      <article class="activity-item">
+        <div><h3>양자화 기반의 딥러닝 체크포인팅 기법</h3><p class="subtitle">2023 한국소프트웨어종합학술대회</p></div>
+        <div class="meta"><div class="type">Poster</div><div class="role">Presenter</div></div>
+      </article>
+    </section>
+    <footer><span>November 11, 2026</span><span>Sangheom. Lee · Curriculum Vitae</span><span>1</span></footer>
+  </main>
+</body>
+</html>
